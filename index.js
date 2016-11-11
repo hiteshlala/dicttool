@@ -31,7 +31,7 @@ let addNewEntries = function (source, dest) {
 
 // Processing translation files
 
-const directory = './locales/';
+const directory = '../tvserver/locales/';
 const filesToProcess = [ 
   'translation-de.json',
   'translation-es.json',
@@ -60,7 +60,7 @@ _.forEach(filesToProcess, (name, index) => {
   
   addNewEntries(source, outfile);
   
-  let dest = name; //directory + name;
+  let dest = directory + name;
   fs.writeFileSync(dest, JSON.stringify(outfile, null, 2), 'utf8');
 });
 
