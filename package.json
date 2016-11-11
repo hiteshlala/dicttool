@@ -4,11 +4,15 @@
   "description": "Add new entries from one dict to rest",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js"
   },
   "author": "Hitesh Lala",
   "license": "ISC",
   "dependencies": {
     "lodash": "^4.16.6"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hiteshlala/dicttool.git"
   }
 }
