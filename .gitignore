@@ -1,4 +1,3 @@
 node_modules/*
-locales/*
 test/*
 !test/translation-en.json

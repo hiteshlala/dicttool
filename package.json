@@ -4,17 +4,14 @@
   "description": "Add new entries from one dict to rest",
   "main": "index.js",
   "scripts": {
-    "addTest":"node index2.js add test",
-    "diffTest":"node index2.js diff test",
-    "add":"node index2.js add",
-    "diff":"node index2.js diff",
+    "addtest":"node index.js add test",
+    "difftest":"node index.js diff test",
+    "add":"node index.js add",
+    "diff":"node index.js diff",
     "start": "npm run add"
   },
   "author": "Hitesh Lala",
   "license": "ISC",
-  "dependencies": {
-    "lodash": "^4.16.6"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/hiteshlala/dicttool.git"
