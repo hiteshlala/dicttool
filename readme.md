@@ -9,6 +9,7 @@ There are two tasks available:
 This adds the new entries into all the language dicts
 
 To execute run one of the following:
+
 *  npm run add
 *  npm start
 *  node index.js add
