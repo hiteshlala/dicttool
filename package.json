@@ -4,7 +4,11 @@
   "description": "Add new entries from one dict to rest",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "addTest":"node index2.js add test",
+    "diffTest":"node index2.js diff test",
+    "add":"node index2.js add",
+    "diff":"node index2.js diff",
+    "start": "npm run add"
   },
   "author": "Hitesh Lala",
   "license": "ISC",
