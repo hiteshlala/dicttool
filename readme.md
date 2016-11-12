@@ -24,13 +24,14 @@ To execute run one of the following:
 *  npm run diff
 *  node index.js diff
 
+## test before doing...
 
 If you just want to test before executing you can add test flag at end of command.
 
-Eg: node index.js add test
+*  node index.js add test
 
 This will write to the test/ directory and you can examine the files
 
-and node index.js diff test 
+*  node index.js diff test 
 
 Will compare the files written in test/ with the english translations
