@@ -23,7 +23,7 @@ let addNewEntries = function (source, dest) {
     else {
       // call self with new sub object
       // check to see if dest even has the key
-      if (dest[key]) {
+      if (dest[key] && typeof dest[key] !== 'string') {
         addNewEntries(source[key], dest[key]);
       }
       // key does not exist just add the whole object
@@ -88,7 +88,7 @@ const filesToProcess = [
   'translation-zh.json' ];
 
 let source =  fs.readFileSync(directory + 'translation-en.json', 'utf8');
-source = source.replace(/^\uFEFF/, '');
+source = source.replace(/^\uFEFF/, ''); // http://stackoverflow.com/questions/2223882/whats-different-between-utf-8-and-utf-8-without-bom
 source = JSON.parse(source);
 
 switch(processtorun) {
@@ -99,7 +99,7 @@ switch(processtorun) {
       let file = directory + name;
       
       let outfile = fs.readFileSync(file, 'utf8');
-      outfile = outfile.replace(/^\uFEFF/, ''); // http://stackoverflow.com/questions/2223882/whats-different-between-utf-8-and-utf-8-without-bom
+      outfile = outfile.replace(/^\uFEFF/, '');
       outfile = JSON.parse(outfile);
       
       addNewEntries(source, outfile);
@@ -117,7 +117,7 @@ switch(processtorun) {
       let file = test ? './test/' + name : directory + name;
       
       let outfile = fs.readFileSync(file, 'utf8');
-      outfile = outfile.replace(/^\uFEFF/, ''); // http://stackoverflow.com/questions/2223882/whats-different-between-utf-8-and-utf-8-without-bom
+      outfile = outfile.replace(/^\uFEFF/, '');
       outfile = JSON.parse(outfile);
       
       compareEntries(source, outfile);
