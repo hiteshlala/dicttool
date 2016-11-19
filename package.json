@@ -2,13 +2,14 @@
   "name": "dicttool",
   "version": "1.0.0",
   "description": "Add new entries from one dict to rest",
-  "main": "index.js",
+  "main": "usetool.js",
   "scripts": {
-    "addtest":"node index.js add test",
-    "difftest":"node index.js diff test",
-    "add":"node index.js add",
-    "diff":"node index.js diff",
-    "start": "npm run add"
+    "addtest":"node usetool.js add-test",
+    "difftest":"node usetool.js diff-test",
+    "deltest": "node usetool.js del-test",
+    "add":"node usetool.js add",
+    "diff":"node usetool.js diff",
+    "del": "node usetool.js del"
   },
   "author": "Hitesh Lala",
   "license": "ISC",
